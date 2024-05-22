@@ -15,8 +15,8 @@ function App() {
         {banknots: 'Rubles', value: 50, number: ' v1234567890'},
     ])
 
-    const onClickFilteredHandler = () => {
-        console.log(money)
+    const onClickFilteredHandler = (nameButton: string) => {
+        console.log(nameButton)
     }
 
     return (
@@ -32,9 +32,9 @@ function App() {
                     )
                 })}
             </ul>
-            <button onClick={onClickFilteredHandler}>ALL MONEY</button>
-            <button onClick={onClickFilteredHandler}>DOLLARS</button>
-            <button onClick={onClickFilteredHandler}>RUBLES</button>
+            <button onClick={() => onClickFilteredHandler('All')}>ALL MONEY</button>
+            <button onClick={() => onClickFilteredHandler('Dollars')}>DOLLARS</button>
+            <button onClick={() => onClickFilteredHandler('Rubles')}>RUBLES</button>
         </>
     );
 }
