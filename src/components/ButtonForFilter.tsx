@@ -1,21 +1,20 @@
 import React from 'react';
-import {FilterButton} from '../App';
 
 
 type ButtonForFilterType = {
     name: string
-    callback: (nameButton: FilterButton) => void
+    callback: (nameButton: string) => void
 }
 
 export const ButtonForFilter = (props: ButtonForFilterType) => {
 
-    const onClickHandler = (nameButton: FilterButton) => {
+    const onClickHandler = (nameButton: string) => {
         props.callback(nameButton)
     }
 
     return (
         <div>
-            <button onClick={() => onClickHandler('Rubles')}>{props.name}</button>
+            <button onClick={() => onClickHandler(props.name)}>{props.name}</button>
         </div>
     );
 };
