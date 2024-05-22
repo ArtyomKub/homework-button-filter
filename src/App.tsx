@@ -30,7 +30,6 @@ function App() {
         currentMoney = money.filter((filteredMoney, index) => filteredMoney.banknots === 'Rubles')
     }
 
-
     return (
         <>
             <ul>
