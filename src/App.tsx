@@ -32,9 +32,9 @@ function App() {
                     )
                 })}
             </ul>
-            <button>ALL MONEY</button>
-            <button>DOLLARS</button>
-            <button>RUBLES</button>
+            <button onClick={onClickFilteredHandler}>ALL MONEY</button>
+            <button onClick={onClickFilteredHandler}>DOLLARS</button>
+            <button onClick={onClickFilteredHandler}>RUBLES</button>
         </>
     );
 }
