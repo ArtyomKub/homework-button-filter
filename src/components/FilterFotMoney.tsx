@@ -25,9 +25,9 @@ export const FilterForMoney = (props: FilterForMoneyType) => {
         props.onClickFilteredHandler(nameButton)
     }
 
-    // const ButtonForAllMoney = (nameButton: FilterButton) => {
-    //     props.onClickFilteredHandler(nameButton)
-    // }
+    const ButtonForAllMoney = (nameButton: FilterButton) => {
+        props.onClickFilteredHandler(nameButton)
+    }
 
     return (
         <>
@@ -49,7 +49,7 @@ export const FilterForMoney = (props: FilterForMoneyType) => {
 
             <ButtonForFilter name={'Rubles'} callback={ButtonForRubles}/>
             <ButtonForFilter name={'Dollars'} callback={ButtonForDollars}/>
-            {/*<ButtonForFilter name={'All'} callback={ButtonForAllMoney}/>*/}
+            <ButtonForFilter name={'All'} callback={ButtonForAllMoney}/>
 
 
         </>
