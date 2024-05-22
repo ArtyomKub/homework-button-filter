@@ -1,5 +1,6 @@
 import React from 'react';
 import {FilterButton} from '../App';
+import {ButtonForFilter} from './ButtonForFilter';
 
 type FilterForMoneyType = {
     currentMoney: Array<CurrentMoneyType>
@@ -30,6 +31,7 @@ export const FilterForMoney = (props: FilterForMoneyType) => {
             <button onClick={() => props.onClickFilteredHandler('All')}>ALL MONEY</button>
             <button onClick={() => props.onClickFilteredHandler('Dollars')}>DOLLARS</button>
             <button onClick={() => props.onClickFilteredHandler('Rubles')}>RUBLES</button>
+            <ButtonForFilter callback={props.onClickFilteredHandler} name={'Rubles'}/>
         </>
     );
 };
