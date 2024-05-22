@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import {FilterForMoney} from './components/FilterFotMoney';
 
-type FilterButton = 'All' | 'Dollars' | 'Rubles'
+export type FilterButton = 'All' | 'Dollars' | 'Rubles'
 
 function App() {
 
@@ -25,14 +25,14 @@ function App() {
 
     let currentMoney = money
     if (filterButton === 'Dollars') {
-        currentMoney = money.filter((filteredMoney, index) => filteredMoney.banknots === 'Dollars')
+        currentMoney = money.filter((filteredMoney) => filteredMoney.banknots === 'Dollars')
     }
     if (filterButton === 'Rubles') {
-        currentMoney = money.filter((filteredMoney, index) => filteredMoney.banknots === 'Rubles')
+        currentMoney = money.filter((filteredMoney) => filteredMoney.banknots === 'Rubles')
     }
 
     return (
-        <FilterForMoney/>
+        <FilterForMoney currentMoney={currentMoney} onClickFilteredHandler={onClickFilteredHandler}/>
     );
 }
 

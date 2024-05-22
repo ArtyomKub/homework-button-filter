@@ -1,10 +1,23 @@
 import React from 'react';
+import {FilterButton} from '../App';
 
-export const FilterForMoney = () => {
+type FilterForMoneyType = {
+    currentMoney: Array<CurrentMoneyType>
+    onClickFilteredHandler: (nameButton: FilterButton) => void
+
+}
+
+type CurrentMoneyType = {
+    banknots: string
+    value: number
+    number: string
+}
+
+export const FilterForMoney = (props: FilterForMoneyType) => {
     return (
         <>
             <ul>
-                {currentMoney.map((objectFromMoneyArray, index) => {
+                {props.currentMoney.map((objectFromMoneyArray, index) => {
                     return (
                         <li key={index}>
                             <span>{objectFromMoneyArray.banknots} - </span>
@@ -14,9 +27,9 @@ export const FilterForMoney = () => {
                     )
                 })}
             </ul>
-            <button onClick={() => onClickFilteredHandler('All')}>ALL MONEY</button>
-            <button onClick={() => onClickFilteredHandler('Dollars')}>DOLLARS</button>
-            <button onClick={() => onClickFilteredHandler('Rubles')}>RUBLES</button>
+            <button onClick={() => props.onClickFilteredHandler('All')}>ALL MONEY</button>
+            <button onClick={() => props.onClickFilteredHandler('Dollars')}>DOLLARS</button>
+            <button onClick={() => props.onClickFilteredHandler('Rubles')}>RUBLES</button>
         </>
     );
 };
