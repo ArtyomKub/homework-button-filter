@@ -28,6 +28,9 @@ function App() {
                     )
                 })}
             </ul>
+            <button>ALL MONEY</button>
+            <button>DOLLARS</button>
+            <button>RUBLES</button>
         </>
     );
 }
