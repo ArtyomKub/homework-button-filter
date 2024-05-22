@@ -15,6 +15,10 @@ function App() {
         {banknots: 'Rubles', value: 50, number: ' v1234567890'},
     ])
 
+    const onClickFilteredHandler = () => {
+        console.log(money)
+    }
+
     return (
         <>
             <ul>
