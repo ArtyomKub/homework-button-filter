@@ -2,7 +2,7 @@ import React from 'react';
 import {FilterButton} from '../App';
 
 
-export type ButtonForFilterType = {
+type ButtonForFilterType = {
     name: string
     callback: (nameButton: FilterButton) => void
 }

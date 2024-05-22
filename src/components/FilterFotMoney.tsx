@@ -16,10 +16,18 @@ export type CurrentMoneyType = {
 
 export const FilterForMoney = (props: FilterForMoneyType) => {
 
-   const ButtonForRubles = (nameButton:FilterButton) => {
-       // props.currentMoney.filter((filteredMoney)=>filteredMoney.banknots==='Rubles')
-       props.onClickFilteredHandler(nameButton)
-   }
+    const ButtonForRubles = (nameButton: FilterButton) => {
+        // props.currentMoney.filter((filteredMoney)=>filteredMoney.banknots==='Rubles')
+        props.onClickFilteredHandler(nameButton)
+    }
+
+    const ButtonForDollars = (nameButton: FilterButton) => {
+        props.onClickFilteredHandler(nameButton)
+    }
+
+    // const ButtonForAllMoney = (nameButton: FilterButton) => {
+    //     props.onClickFilteredHandler(nameButton)
+    // }
 
     return (
         <>
@@ -37,7 +45,13 @@ export const FilterForMoney = (props: FilterForMoneyType) => {
             {/*<button onClick={() => props.onClickFilteredHandler('All')}>ALL MONEY</button>*/}
             {/*<button onClick={() => props.onClickFilteredHandler('Dollars')}>DOLLARS</button>*/}
             {/*<button onClick={() => props.onClickFilteredHandler('Rubles')}>RUBLES</button>*/}
+
+
             <ButtonForFilter name={'Rubles'} callback={ButtonForRubles}/>
+            <ButtonForFilter name={'Dollars'} callback={ButtonForDollars}/>
+            {/*<ButtonForFilter name={'All'} callback={ButtonForAllMoney}/>*/}
+
+
         </>
     );
 };
