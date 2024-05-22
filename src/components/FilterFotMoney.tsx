@@ -2,10 +2,10 @@ import React from 'react';
 import {FilterButton} from '../App';
 import {ButtonForFilter} from './ButtonForFilter';
 
+
 export type FilterForMoneyType = {
     currentMoney: Array<CurrentMoneyType>
     onClickFilteredHandler: (nameButton: FilterButton) => void
-
 }
 
 export type CurrentMoneyType = {
@@ -14,20 +14,12 @@ export type CurrentMoneyType = {
     number: string
 }
 
+
 export const FilterForMoney = (props: FilterForMoneyType) => {
 
-    const ButtonForRubles = (nameButton: FilterButton) => {
-        // props.currentMoney.filter((filteredMoney)=>filteredMoney.banknots==='Rubles')
+    const ButtonForMoney = (nameButton: FilterButton) => {
         props.onClickFilteredHandler(nameButton)
     }
-
-    // const ButtonForDollars = (nameButton: FilterButton) => {
-    //     props.onClickFilteredHandler(nameButton)
-    // }
-    //
-    // const ButtonForAllMoney = (nameButton: FilterButton) => {
-    //     props.onClickFilteredHandler(nameButton)
-    // }
 
     return (
         <>
@@ -43,12 +35,10 @@ export const FilterForMoney = (props: FilterForMoneyType) => {
                 })}
             </ul>
             <div>
-                <ButtonForFilter name={'Rubles'} callback={() => ButtonForRubles('Rubles')}/>
-                <ButtonForFilter name={'Dollars'} callback={() => ButtonForRubles('Dollars')}/>
-                <ButtonForFilter name={'All'} callback={() => ButtonForRubles('All')}/>
+                <ButtonForFilter name={'Rubles'} callback={() => ButtonForMoney('Rubles')}/>
+                <ButtonForFilter name={'Dollars'} callback={() => ButtonForMoney('Dollars')}/>
+                <ButtonForFilter name={'All'} callback={() => ButtonForMoney('All')}/>
             </div>
-
-
         </>
     );
 };
