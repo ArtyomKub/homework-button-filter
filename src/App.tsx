@@ -24,16 +24,17 @@ function App() {
 
     let currentMoney = money
     if (filterButton === 'Dollars') {
-        money.filter((filteredMoney, index)=>filteredMoney.banknots==='Dollars')
-    } if (filterButton === 'Rubles') {
-        money.filter((filteredMoney, index)=>filteredMoney.banknots==='Dollars')
+        currentMoney = money.filter((filteredMoney, index) => filteredMoney.banknots === 'Dollars')
+    }
+    if (filterButton === 'Rubles') {
+        currentMoney = money.filter((filteredMoney, index) => filteredMoney.banknots === 'Rubles')
     }
 
 
     return (
         <>
             <ul>
-                {money.map((objectFromMoneyArray, index) => {
+                {currentMoney.map((objectFromMoneyArray, index) => {
                     return (
                         <li key={index}>
                             <span>{objectFromMoneyArray.banknots} - </span>
