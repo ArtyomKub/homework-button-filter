@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import './App.css';
+import {FilterForMoney} from './components/FilterFotMoney';
 
 type FilterButton = 'All' | 'Dollars' | 'Rubles'
 
@@ -31,7 +32,7 @@ function App() {
     }
 
     return (
-
+        <FilterForMoney/>
     );
 }
 
